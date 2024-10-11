@@ -6,16 +6,14 @@ import java.util.stream.Collectors;
 public class SortHashMapByValue {
 
     //Write a Java program that sorts HashMap by value.
-
     public static void main(String s[]){
-        Map<Integer,String> map = new HashMap();
+        Map<Integer,String> map = new HashMap<>();
         map.put(1,"XYZ");
         map.put(2,"PQR");
         map.put(3,"ABC");
 
-
         List<Map.Entry<Integer,String>> list = new ArrayList<>(map.entrySet());
-//1
+        //1
         Collections.sort(list, new Comparator<Map.Entry<Integer, String>>() {
             @Override
             public int compare(Map.Entry<Integer, String> o1, Map.Entry<Integer, String> o2) {
@@ -33,7 +31,7 @@ public class SortHashMapByValue {
         for(Map.Entry<Integer,String> m : list){
             map1.put(m.getKey(),m.getValue());
         }
-        map1.entrySet();
+        System.out.println(map1.entrySet());
     }
 
 }
